@@ -1,4 +1,5 @@
 local option = vim.opt
+local o = vim.o
 local buffer = vim.b
 local global = vim.g
 
@@ -33,7 +34,10 @@ option.undofile = true
 option.wrap = true
 option.splitright = true
 option.splitbelow = true
-vim.o.clipboard = 'unnamedplus'
+o.clipboard = 'unnamedplus'
+o.scrolloff = 8
+option.list = true
+option.listchars:append "space:⋅"
 
 -- Buffer Settings --
 buffer.fileenconding = "utf-8"
