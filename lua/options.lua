@@ -55,8 +55,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- vim.keymap.set("n", "<A-Tab>", "<cmd>bNext<CR>") 
 vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>", { desc = "[B]uffer [C]lose" })
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- split
 vim.keymap.set("n", "|", ":vsplit<CR>", { desc = "split right" })

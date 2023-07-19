@@ -61,6 +61,10 @@ return {
             -- require('mini.completion').setup() -- 自动补全
             require('mini.comment').setup() -- 注释
             require('mini.cursorword').setup({ delay = 50, }) -- 与光标下word相同的word会有标记
+            require('mini.move').setup({
+                -- move line,block
+                -- use alt+hjkl to move
+            })
         end
     },
     {
