@@ -58,7 +58,7 @@ return {
         event = "VeryLazy",
         config = function()
             require('mini.ai').setup() -- text object 增强
-            require('mini.completion').setup() -- 自动补全
+            -- require('mini.completion').setup() -- 自动补全
             require('mini.comment').setup() -- 注释
             require('mini.cursorword').setup({ delay = 50, }) -- 与光标下word相同的word会有标记
         end
