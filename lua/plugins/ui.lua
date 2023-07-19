@@ -41,11 +41,11 @@ return {
         'lewis6991/gitsigns.nvim',
         config = true,
     },
-    {
-        -- 自动高亮与光标下相同的单词
-        "RRethy/vim-illuminate",
-        config = function()
-            require('illuminate').configure()
-        end
-    },
+    -- {
+    --     -- 自动高亮与光标下相同的单词
+    --     "RRethy/vim-illuminate",
+    --     config = function()
+    --         require('illuminate').configure()
+    --     end
+    -- },
 }

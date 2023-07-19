@@ -60,6 +60,18 @@ return {
             require('mini.ai').setup() -- text object 增强
             require('mini.completion').setup() -- 自动补全
             require('mini.comment').setup() -- 注释
+            require('mini.cursorword').setup({ delay = 50, }) -- 与光标下word相同的word会有标记
         end
+    },
+    {
+        -- navigator
+        'numToStr/Navigator.nvim',
+        config = true,
+        keys = {
+            { "<C-h>", mode = { "n", "t" }, ":NavigatorLeft<CR>", desc = "Goto Left Window" },
+            { "<C-l>", mode = { "n", "t" }, ":NavigatorRight<CR>", desc = "Goto Right Window" },
+            { "<C-k>", mode = { "n", "t" }, ":NavigatorUp<CR>", desc = "Goto Up Window" },
+            { "<C-j>", mode = { "n", "t" }, ":NavigatorDown<CR>", desc = "Goto Down Window" },
+        }
     },
 }
