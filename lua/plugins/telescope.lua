@@ -1,11 +1,12 @@
 return {
     {
+        -- 搜索插件
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
         dependencies ={
             'nvim-lua/plenary.nvim',
             {
-                'nvim-telescope/telescope-fzf-native.nvim',
+                'nvim-telescope/telescope-fzf-native.nvim', -- 本地的fzf来加快 telescope 的速度
                 build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' 
 
             },

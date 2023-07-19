@@ -1,4 +1,5 @@
 return {
+    -- ui 相关的配置
     {
         -- colortheme
         "folke/tokyonight.nvim",
@@ -27,6 +28,7 @@ return {
         config = true, -- Or config = {} Or config = function() ... end
     },
     {
+        -- 显示缩进的竖线
         "lukas-reineke/indent-blankline.nvim",
         opts = {
             space_char_blankline = " ",
@@ -35,10 +37,12 @@ return {
         },
     },
     {
+        -- 显示 git 信息
         'lewis6991/gitsigns.nvim',
         config = true,
     },
     {
+        -- 自动高亮与光标下相同的单词
         "RRethy/vim-illuminate",
         config = function()
             require('illuminate').configure()
