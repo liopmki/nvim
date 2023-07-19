@@ -3,7 +3,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     dependencies = {
-        'nvim-treesitter/playground',
+        -- 'nvim-treesitter/playground',
     },
     config = function()
         local install = require 'nvim-treesitter.install'
@@ -18,7 +18,7 @@ return {
                 sync_install = false,
                 highlight = { enable = true },
                 indent = { enable = true },
-                playground = { enable = true },
+                -- playground = { enable = true },
             }
         )
     end

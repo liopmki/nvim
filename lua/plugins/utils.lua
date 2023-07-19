@@ -66,6 +66,7 @@ return {
     {
         -- navigator
         'numToStr/Navigator.nvim',
+        cmd = {"NavigatorLeft","NavigatorRight","NavigatorUp","NavigatorDown"},
         config = true,
         keys = {
             { "<C-h>", mode = { "n", "t" }, ":NavigatorLeft<CR>", desc = "Goto Left Window" },
