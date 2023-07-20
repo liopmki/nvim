@@ -62,6 +62,9 @@ vim.keymap.set("n", "<leader>bc", "<cmd>bd<CR>", { desc = "[B]uffer [C]lose" })
 vim.keymap.set("n", "|", ":vsplit<CR>", { desc = "split right" })
 vim.keymap.set("n", "\\", ":split<CR>", { desc = "split down" })
 
+-- indent all
+-- vim.keymap.set("n", "==", "ggVG=", { desc = 'Indent All' })
+
 -- Highlight on yank --
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
