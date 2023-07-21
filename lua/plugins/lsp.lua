@@ -3,7 +3,8 @@ return {
     dependencies = {
         { 'williamboman/mason.nvim', config = true },
         'williamboman/mason-lspconfig.nvim',
-        { 'j-hui/fidget.nvim',       tag = 'legacy', event = "LspAttach", opts = {} },
+        { 'j-hui/fidget.nvim',       tag = 'legacy', event = "LspAttach" },
+        "folke/neodev.nvim",
     },
     config = function()
         local on_attach = function(_, bufnr)
@@ -59,6 +60,9 @@ return {
                 },
             },
         }
+
+        require("fidget").setup()
+        require("neodev").setup()
 
         local mason_lspconfig = require 'mason-lspconfig'
 
