@@ -47,12 +47,18 @@ return {
         end
 
         local servers = {
+            -- C and C++
             clangd = {},
             -- gopls = {},
+            -- python
             pyright = {},
+            -- rust
             rust_analyzer = {},
+            -- html + css + javascript
             tsserver = {},
-
+            html = {},
+            cssls = {},
+            -- lua
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
