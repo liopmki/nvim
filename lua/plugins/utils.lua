@@ -18,10 +18,22 @@ return {
         event = "VeryLazy",
         opts = {},
         keys = {
-            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-            { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-            { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-            { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+            { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end,   desc = "Flash" },
+            {
+                "S",
+                mode = { "n", "o", "x" },
+                function() require("flash").treesitter() end,
+                desc =
+                "Flash Treesitter"
+            },
+            { "r", mode = "o",               function() require("flash").remote() end, desc = "Remote Flash" },
+            {
+                "R",
+                mode = { "o", "x" },
+                function() require("flash").treesitter_search() end,
+                desc =
+                "Treesitter Search"
+            },
             -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
         },
     },
@@ -36,9 +48,9 @@ return {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
         dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
+            { "nvim-lua/plenary.nvim",       lazy = true, },
+            { "nvim-tree/nvim-web-devicons", lazy = true, }, -- not strictly required, but recommended
+            { "MunifTanjim/nui.nvim",        lazy = true, },
         },
         cmd = "Neotree",
         keys = {
@@ -57,9 +69,9 @@ return {
         version = '*',
         event = "VeryLazy",
         config = function()
-            require('mini.ai').setup() -- text object 增强
+            require('mini.ai').setup()                        -- text object 增强
             -- require('mini.completion').setup() -- 自动补全
-            require('mini.comment').setup() -- 注释
+            require('mini.comment').setup()                   -- 注释
             require('mini.cursorword').setup({ delay = 50, }) -- 与光标下word相同的word会有标记
             require('mini.move').setup({
                 -- move line,block
@@ -70,13 +82,13 @@ return {
     {
         -- navigator
         'numToStr/Navigator.nvim',
-        cmd = {"NavigatorLeft","NavigatorRight","NavigatorUp","NavigatorDown"},
+        cmd = { "NavigatorLeft", "NavigatorRight", "NavigatorUp", "NavigatorDown" },
         config = true,
         keys = {
-            { "<C-h>", mode = { "n", "t" }, ":NavigatorLeft<CR>", desc = "Goto Left Window" },
+            { "<C-h>", mode = { "n", "t" }, ":NavigatorLeft<CR>",  desc = "Goto Left Window" },
             { "<C-l>", mode = { "n", "t" }, ":NavigatorRight<CR>", desc = "Goto Right Window" },
-            { "<C-k>", mode = { "n", "t" }, ":NavigatorUp<CR>", desc = "Goto Up Window" },
-            { "<C-j>", mode = { "n", "t" }, ":NavigatorDown<CR>", desc = "Goto Down Window" },
+            { "<C-k>", mode = { "n", "t" }, ":NavigatorUp<CR>",    desc = "Goto Up Window" },
+            { "<C-j>", mode = { "n", "t" }, ":NavigatorDown<CR>",  desc = "Goto Down Window" },
         }
     },
 }

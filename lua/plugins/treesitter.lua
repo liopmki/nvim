@@ -2,6 +2,7 @@ return {
     -- 语法高亮
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
         -- 'nvim-treesitter/playground',
     },
