@@ -49,6 +49,8 @@ return {
         end
 
         local servers = {
+            -- markdown
+            marksman = {},
             -- C and C++
             clangd = {},
             -- gopls = {},
