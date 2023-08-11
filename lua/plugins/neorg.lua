@@ -3,7 +3,7 @@ return {
         "nvim-neorg/neorg",
         build = ":Neorg sync-parsers",
         cmd = "Neorg",
-        ft = "neorg",
+        ft = "norg",
         dependencies = { "nvim-lua/plenary.nvim", lazy = true, },
         opts = {
             load = {
