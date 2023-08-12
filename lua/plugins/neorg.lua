@@ -16,7 +16,9 @@ return {
                             notes = "C:\\Users\\Administrator\\OneDrive\\Project\\notes\\neorg",
                         },
                     },
+                    defaults_workspace = "notes",
                 },
+                ["core.summary"] = {},
             },
         }
     },
